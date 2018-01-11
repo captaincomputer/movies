@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Martin's Movies</title>
+ <!-- External JS libs -->
+<script src="js/script.js"></script>
+ <!-- CSS files for your game -->
+<link rel="stylesheet" href="css/style.css">    
+</head>
+<body id="mybody" onload="init()">
+  <button class="movie-buttons" id="pictures" 
+	onclick="loadList('Picture')">Best Picture</button>
+	
+  <button class="movie-buttons" id="actors"
+	onclick="loadList('Actor')">Best Actor</button>
+	
+	<button class="movie-buttons" id="actress"
+	onclick="loadList('Actress')">Best Actress</button>	
+	
+  <button class="movie-buttons" id="supporting_actress" onclick="loadList('Supporting_Actress')">Best Supporting Actress</button>	
+	
+  <button class="movie-buttons" id="supporting_actor"
+	onclick="loadList('Supporting_Actor')">Best Supporting Actor</button>
+	
+	<button class="movie-buttons" id="directors" 
+	onclick="loadList('Director')">Best Director</button>
+	<br>
+
+	<label for="search">Look up: </label>
+	<input type="text" id="search" required="required">
+	<form>	
+		<input id="person" type="radio" name="what" value="person"> 
+		<label for="person"> person</label>
+		
+		<input id="movie" type="radio" name="what" value="movie"> 
+		<label for="movie"> movie</label>
+	</form>	
+		<button onclick="search()">Search</button>	
+<!-- genre dropdown -->	
+	<form>
+		<div class="multiselect">
+			<div class="selectBox" onclick="showCheckboxes()">
+				<select>
+					<option>Genres</option>
+				</select>
+				<div class="overSelect"></div>
+			</div>
+			<div id="checkboxes">
+			</div>
+		</div>
+	</form>
+<!--   dynamic table here -->
+	<div id="dvTable"></div>
+	</body>
+	</html>
